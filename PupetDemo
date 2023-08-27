@@ -1,0 +1,58 @@
+// const puppeteer = require('puppeteer');
+
+// (async () => {
+  // const browser = await puppeteer.launch({headless:false});   //headless is false bcz we want to launch the Chromium browser
+//   const page = await browser.newPage();
+ 
+//   await page.goto('https://www.google.com/');
+//   // await page.screenshot({ path:'D:\WEBDEVELOPMENT\Pupetter'});
+//      await browser.close();
+// })();
+// const puppeteer = require('puppeteer');
+
+// (async () => {
+//   const browser = await puppeteer.launch({headless:false});
+//   const page = await browser.newPage();
+ 
+//   await page.goto('https://www.google.com/');
+//   // await page.screenshot({ path:'Pupetter.png',fullpage:true});      // the path project directory path there the screenshoot will be saved 
+//      await browser.close();
+// })();
+// const puppeteer = require('puppeteer');
+
+// (async () => {
+//   const browser = await puppeteer.launch({headless:false});
+//   const page = await browser.newPage();
+ 
+//   await page.goto('https://www.google.com/');
+//   await page.pdf({ path:'Google.pdf',format:'A4'});
+//      await browser.close();
+// })();
+// const puppeteer = require('puppeteer');
+
+// (async () => {
+//   const browser = await puppeteer.launch({headless:false});
+//   const page = await browser.newPage();
+ 
+//   await page.goto('https://www.google.com/');
+//   await page.focus('#APjFqb');
+//   await page.type('puppeteer');
+//   await page.click('#gNO89b->button');
+//   await page.waitForNavigation();
+//   await page.pdf({ path:'GoogleSearch.pdf',format:'A4'});
+//   await browser.close();
+// })();
+const puppeteer = require('puppeteer');
+
+(async () => {
+  const browser = await puppeteer.launch({headless:false});
+  const page = await browser.newPage();
+ 
+  await page.goto('https://www.npmjs.com/');
+  await page.focus('#search > div > div > input');
+  await page.type('react');
+  await page.click('##search:nth-child(1) > button');
+  await page.waitForNavigation();
+  await page.pdf({ path:'GoogleSearch.pdf',format:'A4'});
+  // await browser.close();
+})();
